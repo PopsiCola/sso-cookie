@@ -1,0 +1,17 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>支付</title>
+</head>
+<body>
+    <h1>欢迎来到支付页</h1>
+    <span>
+        <a th:if="${session.loginUser == null}" href="http://www.login.sso.com:9000/showLogin?target=http://www.pay.sso.com:9003/pay">登录</a>
+        <a th:unless="${session.loginUser == null}" href="http://www.login.sso.com:9000/login/loginOut">退出</a>
+    </span>
+
+    <p th:unless="${session.loginUser == null}">
+        <span th:text="${session.loginUser.username}" style="color: deepskyblue">已登录</span>
+    </p></body>
+</html>

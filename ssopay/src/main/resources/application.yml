@@ -1,0 +1,11 @@
+#登录模块
+server:
+  port: 9003
+
+#  thymeleaf
+spring:
+  thymeleaf:
+    mode: HTML5
+    encoding: utf-8
+    prefix: classpath:/templates/  #prefix：指定模板所在的目录
+    suffix: .html
